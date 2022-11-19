@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
-        }
         #container{
             width: 100%;
             height: 700px;
@@ -36,7 +32,7 @@
 <body>
     <div id="container">
         <?php include 'header.php'; ?>
-        <?php include 'content.php'; ?>
+        <?php include 'product_detail.php'; ?>
         <?php include 'footer.php'; ?>
     </div>
 </body>
