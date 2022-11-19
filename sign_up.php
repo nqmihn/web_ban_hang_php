@@ -64,11 +64,11 @@
             let ok_pw = true;
             let ok_confirm_pw = true;
             const check_password = () => {
-                // Phải có ít nhất 8 kí tự chữ và số, có ít nhất 1 chữ 1 số 1 chữ in hoa
+                // Phải có ít nhất 8 kí tự chữ và số, có ít nhất 1 chữ 1 số 1 chữ in hoa, không có kí tự đặc biệt
                 let rgx_password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/; 
                 if (!rgx_password.test(document.getElementById('password').value)){
                     document.getElementById('msg-password').style.color = 'red';
-                    document.getElementById('msg-password').innerHTML = 'Mật khẩu phải nhiều hơn 8 kí tự, phải có ít nhất 1 chữ số, 1 chữ cái in hoa';
+                    document.getElementById('msg-password').innerHTML = 'Mật khẩu phải nhiều hơn 8 kí tự, phải có ít nhất 1 chữ số, 1 chữ cái in hoa, không có ký tự đặc biệt';
                     ok_pw = false;
                 }else {
                     document.getElementById('msg-password').innerHTML ='';
