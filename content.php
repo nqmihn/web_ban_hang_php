@@ -18,7 +18,7 @@
                 <?php echo $each['name']; ?>
             </h1>
             <img src="admin/products/photos/<?php echo $each['image']; ?>" height="100">
-            <p><?php echo $each['price'] ?></p>
+            <p><?php echo $each['price'] ?>$</p>
             <a href="product.php?id=<?php echo $each['id'] ?>">
                 >> Chi tiết
             </a>

@@ -16,7 +16,7 @@ if ($num_rows > 0) {
 }
 
 $sql = "INSERT INTO customers(name, email, password, phone, address) 
-    VALUES ('$name', '$email', '$password','$phone', '$address')";
+        VALUES ('$name', '$email', '$password','$phone', '$address')";
 mysqli_query($connect, $sql);
 $sql = "select id from customers
 where email='$email'";
