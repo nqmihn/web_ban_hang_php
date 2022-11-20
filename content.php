@@ -12,7 +12,8 @@
         $result = mysqli_query($connect,$sql);
 ?>
 <div id="mid">
-    <?php foreach ($result as $each){ ?>  
+    <?php 
+    foreach ($result as $each){ ?>  
         <div class="each_product">
             <h1>
                 <?php echo $each['name']; ?>
@@ -22,6 +23,10 @@
             <a href="product.php?id=<?php echo $each['id'] ?>">
                 >> Chi tiết
             </a>
+            <br>
+            <?php if (isset($_SESSION['id'])) {?>
+            <button class="btn-add-to-cart" data-id="<?php echo $each['id'] ?>">Thêm vào giỏ hàng</button>
+            <?php } ?>
         </div>    
     <?php }?>
         
