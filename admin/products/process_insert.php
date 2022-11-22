@@ -1,3 +1,4 @@
+<?php require '../check_admin.php'; ?>
 <?php
 if(empty($_POST['name']) || empty($_FILES['image']) || empty($_POST['price']) || empty($_POST['description']) || empty($_POST['id_manufacturer'])){
     header('location:form_insert.php?error=Phải điền đầy đủ thông tin');

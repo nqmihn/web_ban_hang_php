@@ -1,3 +1,4 @@
+<?php require '../check_super_admin.php'; ?>
 <?php  
     if(empty($_POST['name']) || empty($_POST['phone']) || empty($_POST['address']) || empty($_POST['image'])){
         header('location:form_insert.php?error=Phải điền đầy đủ thông tin');

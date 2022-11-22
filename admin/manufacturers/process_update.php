@@ -1,3 +1,4 @@
+<?php require '../check_super_admin.php'; ?>
 <?php 
     if (empty($_POST['id'])){
         header('location:form_update.php?error=Phải truyền mã để sửa');
