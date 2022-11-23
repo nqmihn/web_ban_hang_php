@@ -1,5 +1,6 @@
 <?php
 $email = $_POST['email'];
+// $password = md5($_POST['password']);
 $password = $_POST['password'];
 if ($_POST['remember_login']){
     $remember = true;

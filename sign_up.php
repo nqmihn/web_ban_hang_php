@@ -23,13 +23,14 @@
         <span id="msg-email"></span>
         <br>
         Mật khẩu
-        <input type="password" name="password" onkeyup="check_password()" id="password">
-        Hiện
-        <input type="checkbox" onclick="showPassword();">
+        <input type="password" name="password" onkeyup="check_password()" id="input-password">
         <span id="msg-password"></span>
         <br>
+        <input type="checkbox" onclick="showPassword();">
+        Hiện
+        <br>
         Nhập lại mật khẩu
-        <input type="password"  id="confirm-password" onkeyup="check_password()">
+        <input type="password"  id="confirm-password" onkeyup="check_confirm_password()">
         <span id="msg-confirm-password"></span>
         <br>
         Số điện thoại
@@ -56,36 +57,40 @@
                 }
 
             }
-            const showPassword = () => {
-                let password = document.getElementById('password');
-                if (password.type === "password"){
-                    password.type = "text";
-                }else{
-                    passord.type = "password";
-                }
+            function showPassword() {
+            var x = document.getElementById("input-password");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
             }
+        }
             let ok_pw = true;
             let ok_confirm_pw = true;
             const check_password = () => {
-                // Phải có ít nhất 8 kí tự chữ và số, có ít nhất 1 chữ 1 số 1 chữ in hoa, không có kí tự đặc biệt
-                let rgx_password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/; 
-                if (!rgx_password.test(document.getElementById('password').value)){
-                    document.getElementById('msg-password').style.color = 'red';
-                    document.getElementById('msg-password').innerText = 'Mật khẩu phải nhiều hơn 8 kí tự, phải có ít nhất 1 chữ số, 1 chữ cái in hoa, không có ký tự đặc biệt';
-                    ok_pw = false;
-                }else {
-                    document.getElementById('msg-password').innerText ='';
-                    ok_pw = true;
-                }
-                if (document.getElementById('password').value != document.getElementById('confirm-password').value){
-                    document.getElementById('msg-confirm-password').style.color = 'red';
-                    document.getElementById('msg-confirm-password').innerText = 'Không giống mật khẩu đã nhập'
-                    ok_confirm_pw = false;
-                }else{
-                    document.getElementById('msg-confirm-password').innerText = '';
-                    ok_confirm_pw = true;
-                }
+            // Phải có ít nhất 8 kí tự chữ và số, có ít nhất 1 chữ 1 số 1 chữ in hoa, không có kí tự đặc biệt
+            // let rgx_password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/; 
+            let rgx_password = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,}$/;
+            if (!rgx_password.test(document.getElementById('input-password').value)) {
+                document.getElementById('msg-password').style.color = 'red';
+                document.getElementById('msg-password').innerText = 'Mật khẩu phải nhiều hơn 8 kí tự, phải có ít nhất 1 chữ hoặc số, không có ký tự đặc biệt';
+                ok_pw = false;
+            } else {
+                document.getElementById('msg-password').innerText = '';
+                ok_pw = true;
             }
+           
+        }
+        const check_confirm_password = () => {
+        if (document.getElementById('input-password').value != document.getElementById('confirm-password').value) {
+                document.getElementById('msg-confirm-password').style.color = 'red';
+                document.getElementById('msg-confirm-password').innerText = 'Không giống mật khẩu đã nhập'
+                ok_confirm_pw = false;
+            } else {
+                document.getElementById('msg-confirm-password').innerText = '';
+                ok_confirm_pw = true;
+            }
+        }
             let ok_phone = true;
             const check_phone = () => {
                 let rgx_phone = /^(?:0|\+84)[1-9][0-9]{8,9}$/;
@@ -100,7 +105,7 @@
             }
             function check(){
                 if (document.getElementById('name').value === ''|| document.getElementById('email').value === '' 
-                || document.getElementById('password').value === '' || document.getElementById('phone').value === ''
+                || document.getElementById('input-password').value === '' || document.getElementById('phone').value === ''
                 || document.getElementById('address').value === ''){
                     document.getElementById('check-all').style.color = 'red';
                     document.getElementById('check-all').innerText = 'Vui lòng điền đầy đủ thông tin'

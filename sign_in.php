@@ -1,22 +1,4 @@
-<?php 
-    session_start();
-    if (isset($_COOKIE['remember_login'])){
-        $token = $_COOKIE['remember_login'];
-        require 'admin/connect.php';
-        $sql = "select * from customers
-        where token = '$token'";
-        $result = mysqli_fetch_array(mysqli_query($connect,$sql));
-        $number_rows = mysqli_num_rows(mysqli_query($connect,$sql));
-        if ($number_rows == 1){
-        $_SESSION['id'] = $result['id'];
-        $_SESSION['name'] = $result['name'];
-    }
-    }
-    if (isset($_SESSION['id'])){
-        header('location:index.php');
-        exit;
-    }
-?>
+<?php include 'check_login.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,6 +27,7 @@
         <br>
         <button onclick="return check()">Đăng nhập</button>
     </form>
+    <a href="forgot_password.php">Quên mật khẩu</a>
     <script type="text/javascript">
         function check() {
             if (document.getElementById('email').value === '' || document.getElementById('password').value === '') {

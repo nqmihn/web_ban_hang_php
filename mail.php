@@ -28,7 +28,7 @@ try {
     $mail->CharSet = 'UTF-8';
     $mail->SMTPSecure = "tls";
     //Recipients
-    $mail->setFrom('qminhqb3@gmail.com', 'Minh');
+    $mail->setFrom('qminhqb3@gmail.com', 'Shop Gura');
     $mail->addAddress($email, $name);     //Add a recipient
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
