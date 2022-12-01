@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/base.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--separate">Mở trên ứng dụng</li>
+                        <li class="header__navbar-item">Kết nối</li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">Thông báo</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link header__navbar-item--bold">Đăng nhập</a>
+                        </li>
+                        <li class="header__navbar-item ">
+                            <a href="" class="header__navbar-item-link header__navbar-item--bold">Đăng ký</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="content"></div>
+        <footer class="footer"></footer>
+    </div>
+    <!-- <div id="container">
+        <?php include 'header.php'; ?>
+        <?php include 'content.php'; ?>
+        <?php include 'footer.php'; ?>
+    </div> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.btn-add-to-cart').click(function () { 
+                let id = $(this).data('id');
+                $.ajax({
+                    type: "GET",
+                    url: "add_to_cart.php",
+                    data: {id},
+                    success: function () {
+                        alert("Thêm thành công")
+                    }
+                });
+                
+            });
+        });
+    </script> -->
+</body>
+
+</html>
