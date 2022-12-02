@@ -12,20 +12,36 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
+    margin-top: 4px;
 }
 
 .header__navbar-item {
     margin: 0 8px;
     position: relative;
+    min-height: 18px;
 }
 
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 350;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover,
+.header__navbar-icon-link:hover {
+    color: rgba(240, 255, 255, 0.714);
+    cursor: pointer;
 }
 
 .header__navbar-item--separate::after {
@@ -33,11 +49,26 @@
     display: block;
     position: absolute;
     border-left: 1px solid rgb(92, 90, 90);
-    width: 1px;
     height: 13px;
-    right: -10%;
-    top: 0%;
+    right: -10px;
+    top: 0;
 }
-.header__navbar-item--bold{
-    font-weight: 500;
+
+.header__navbar-item--bold {
+    font-weight: 450;
+}
+
+.header__navbar-icon-link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon {
+    size: 1.5rem;
+    margin: 0 3px;
+}
+
+.header__navbar-item--no-pointer {
+    cursor: text;
+    color: var(--text-color);
 }
