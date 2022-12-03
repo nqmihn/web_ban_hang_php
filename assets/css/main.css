@@ -144,6 +144,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
 }
 
 .auth-form__heading {
@@ -212,5 +214,27 @@
     color: var(--white-color);
 }
 .auth-form__connect-title{
-    margin: 0 20px;
+    margin: 0 24px;
+}
+
+.auth-form__aside{
+    margin-top: 18px;
+}
+
+.auth-form__option{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    align-items: center;
+}
+.auth-form__remember-login-box{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 3px;
+}
+
+.auth-form__forgot-password-link{
+    text-decoration: none;
+    color: black;
+
 }
