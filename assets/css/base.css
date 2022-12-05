@@ -3,7 +3,9 @@
     --black-color: rgb(0, 0, 0);
     --red-color: #ff0000;
     --text-color: #333;
-
+    --navbar-height: 24px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -77,7 +79,7 @@ html {
     margin: auto;
     z-index: 2;
     border-radius: 4px;
-    animation: growth linear 0.1s;
+    animation: growth linear 0.15s;
 }
 
 /* Button */
