@@ -72,13 +72,38 @@
                         </svg>
                     </div>
                     <div class="header__search">
-                        <input type="text" class="header__seach-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <!-- Search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Áo khoác diệt tộc</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Áo khoác diệt tộc 1</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Áo khoác diệt tộc 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <button class="header__search-btn">
                             <i class="header__search-btn-icon fas fa-search"></i>
                         </button>
                     </div>
+                    <!-- Cart -->
                     <div class="header__cart">
-                        <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <div class="header__cart-list header__cart-list-no-cart">
+                                <img src="assets/img/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Giỏ hàng trống</span>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>     
             </div>
