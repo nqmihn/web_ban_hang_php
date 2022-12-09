@@ -41,9 +41,13 @@
 }
 
 .header__navbar-user-name {
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header__navbar-user-menu {
@@ -71,7 +75,7 @@
     cursor: pointer;
 }
 
-.header__navbar-user-menu::after{
+.header__navbar-user-menu::after {
     content: "";
     display: block;
     position: absolute;
@@ -100,13 +104,13 @@
 }
 
 .header__navbar-user-item a:hover {
-    background-color: #a4a4a4;
+    background-color: #fafafa;
 }
 
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     text-decoration: none;
     font-weight: 350;
@@ -143,6 +147,10 @@
 .header__navbar-icon-link {
     color: var(--text-color);
     text-decoration: none;
+}
+
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
 }
 
 .header__navbar-icon {
@@ -337,6 +345,11 @@
 
 .header__logo {
     width: 200px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
 }
 
 .header__logo-img {
