@@ -18,6 +18,7 @@ html {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+
 /* Responsive */
 .grid {
     width: 1200px;
@@ -36,14 +37,16 @@ html {
     margin-right: -12px;
 }
 
-.grid__column-2{
+.grid__column-2 {
     padding-left: 12px;
     padding-right: 12px;
     width: 16.6667%;
 }
-.grid__column-10{
+
+.grid__column-10 {
     width: 83.3334%;
 }
+
 /* Animation */
 @keyframes fadeIn {
     from {
@@ -84,8 +87,8 @@ html {
 }
 
 .modal__body {
-    --growth-from:0.7;
-    --growth-to:1;
+    --growth-from: 0.7;
+    --growth-to: 1;
     margin: auto;
     z-index: 2;
     border-radius: 4px;
@@ -94,7 +97,7 @@ html {
 
 /* Button */
 .btn {
-    min-width: 120px;
+    min-width: 90px;
     min-height: 30px;
     text-decoration: none;
     border: none;
@@ -102,7 +105,7 @@ html {
     font-size: 1.3rem;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 0 12px;
@@ -129,4 +132,62 @@ html {
 .btn.btn--size-s:hover {
     background-color: rgba(85, 81, 81, 0.3);
 
+}
+
+/* Selection */
+.select-input {
+    min-width: 200px;
+    padding: 0 12px;
+    height: 34px;
+    border-radius: 2px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input__icon:hover {
+    cursor: pointer;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 26px;
+    border-radius: 2px;
+    background-color: white;
+    padding: 8px 16px;
+    display: none;
+    animation: fadeIn ease-in 0.2s;
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+}
+
+.select-input__link:hover {
+    color: rgb(96, 237, 237);
 }
