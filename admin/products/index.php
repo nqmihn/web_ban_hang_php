@@ -13,7 +13,7 @@
         include '../connect.php';
         $sql_products = "select * from products";
         $number_of_products = mysqli_num_rows(mysqli_query($connect,$sql_products));
-        $number_of_products_in_page = 4;
+        $number_of_products_in_page = 8;
         $pages = ceil($number_of_products/$number_of_products_in_page);
         $page = 1;
         if (isset($_GET['page']))
@@ -57,7 +57,7 @@
     </table>
     Trang
        <?php for ($i = 1; $i <= $pages; $i++) { ?>
-        <a href="?page=<?php echo $i ?>">
+        <a href="?page=<?php echo $i ?>" style="text-decoration: none;">
             <?php echo $i ?>
         </a>
 
